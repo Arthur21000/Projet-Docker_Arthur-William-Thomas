@@ -51,5 +51,9 @@ Pour accéder à la plateform de streaming final "Jellyfin" URL "ip machine:8096
 
 - Ensuite vous arriver sur la page de configuration (Si c'est pas le cas recharger la page) puis suivez les instructions
 
+- Ajoutez ensuite vos médiathèque (soit deux, une pour les films et une pour les séries)
+
+![image](https://user-images.githubusercontent.com/56296245/157657359-2ee7a8ce-fb2b-41f1-92f5-fb33d942c1b5.png)
+
 
 
