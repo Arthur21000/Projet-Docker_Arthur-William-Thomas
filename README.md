@@ -55,5 +55,8 @@ Pour accéder à la plateform de streaming final "Jellyfin" URL "ip machine:8096
 
 ![image](https://user-images.githubusercontent.com/56296245/157657359-2ee7a8ce-fb2b-41f1-92f5-fb33d942c1b5.png)
 
+![image](https://user-images.githubusercontent.com/56296245/157657519-91745c2c-a2e1-41e0-a476-4ba206cf0bbc.png)
+
+![image](https://user-images.githubusercontent.com/56296245/157657590-05ebc416-2478-4e00-8370-1685c8861dd8.png)
 
 
