@@ -8,28 +8,30 @@ Avant de lancer, modifiez dans le docker-compose.yml la ligne 110   "- LOCAL_NET
 Lancer les conteneurs
 - docker-compose up -d
 
-Pour accéder à portainer pour administrer les conteneurs URL <ip machine:9000> 
+Pour accéder à portainer pour administrer les conteneurs URL "ip machine:9000" 
 Compte : admin/Admin33*
 
-Pour accéder à Jackett URL <ip machine:9117>
+Pour accéder à Jackett URL "ip machine:9117"
 Deux indexer sont déjà configurer OxTorrent et GkTorrent
 
-Pour accéder à Radarr URL <ip machine:7878>
+Pour accéder à Radarr URL "ip machine:7878"
 Pour ajouter les indexers de Jackett il faut aller dans "settings - indexers" puis ajoutez un indexers Torznab
 ![image](https://user-images.githubusercontent.com/56296245/157655186-2973c8c7-9725-4061-9fb5-7d37e32948c6.png)
 Faire un second pour OxTorrent
+Pour ajouter le download-client il faut aller dans "settings - download-client " puis ajoutez un client Transmission
+![image](https://user-images.githubusercontent.com/56296245/157655912-7ed70841-b75c-411d-b7b7-2c0c074f17bb.png)
 
-Pour accéder à Sonarr URL <ip machine:8989>
-![image](https://user-images.githubusercontent.com/56296245/157655186-2973c8c7-9725-4061-9fb5-7d37e32948c6.png)
-Faire un second pour OxTorrent
 
-Pour accéder à Bazarr URL <ip machine:6767>
+Pour accéder à Sonarr URL "ip machine:8989"
+Pour ajouter les indexers et le download-client, faites la même chose que sur Radarr
 
-Pour accéder à Transmission-OPENVPN  URL <ip machine:9091>
+Pour accéder à Bazarr URL "ip machine:6767"
+
+Pour accéder à Transmission-OPENVPN  URL "ip machine:9091"
 Pour changer le compte VPN, allez dans le docker-compose.yml et changez les lignes 106 à 109
-- OPENVPN_PROVIDER=<VPN>
+- OPENVPN_PROVIDER=VPN
 - OPENVPN_CONFIG=
-- OPENVPN_USERNAME=<nom>
-- OPENVPN_PASSWORD=<password>
+- OPENVPN_USERNAME=nom
+- OPENVPN_PASSWORD=password
 
-Pour accéder à la plateform de streaming final "Jellyfin" URL <ip machine:8096>
+Pour accéder à la plateform de streaming final "Jellyfin" URL "ip machine:8096
