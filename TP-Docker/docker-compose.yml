@@ -101,7 +101,7 @@ services:
     cap_add:
       - NET_ADMIN
     volumes:
-      - '/home/user/yday/transmission:/data'
+      - '/home/user/TP-Docker/transmission:/data'
     environment:
       - OPENVPN_PROVIDER=NORDVPN
       - OPENVPN_CONFIG=
