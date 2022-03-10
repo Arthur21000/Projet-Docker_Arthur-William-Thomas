@@ -17,13 +17,13 @@ Deux indexer sont déjà configurer OxTorrent et GkTorrent
 Pour accéder à Radarr URL <ip machine:7878>
 Pour ajouter les indexers de Jackett il faut aller dans "settings - indexers" puis ajoutez un indexers Torznab
 ![image](https://user-images.githubusercontent.com/56296245/157655186-2973c8c7-9725-4061-9fb5-7d37e32948c6.png)
-
+Faire un second pour OxTorrent
 
 Pour accéder à Sonarr URL <ip machine:8989>
-
+![image](https://user-images.githubusercontent.com/56296245/157655186-2973c8c7-9725-4061-9fb5-7d37e32948c6.png)
+Faire un second pour OxTorrent
 
 Pour accéder à Bazarr URL <ip machine:6767>
-
 
 Pour accéder à Transmission-OPENVPN  URL <ip machine:9091>
 Pour changer le compte VPN, allez dans le docker-compose.yml et changez les lignes 106 à 109
