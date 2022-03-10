@@ -44,3 +44,12 @@ Pour changer le compte VPN, allez dans le docker-compose.yml et changez les lign
 - OPENVPN_PASSWORD=password
 
 Pour accéder à la plateform de streaming final "Jellyfin" URL "ip machine:8096
+
+- Connecter vous au serveur
+
+![image](https://user-images.githubusercontent.com/56296245/157656794-903daabc-642c-45d1-9f04-0497565e60af.png)
+
+- Ensuite vous arriver sur la page de configuration (Si c'est aps le cas recharger la page) puis suivez les instructions
+
+
+
