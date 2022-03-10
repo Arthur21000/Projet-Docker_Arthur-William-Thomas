@@ -15,6 +15,8 @@ Pour accéder à Jackett URL <ip machine:9117>
 Deux indexer sont déjà configurer OxTorrent et GkTorrent
 
 Pour accéder à Radarr URL <ip machine:7878>
+Pour ajouter les indexers de Jackett il faut aller dans "settings - indexers" puis ajoutez un indexers Torznab
+![image](https://user-images.githubusercontent.com/56296245/157655186-2973c8c7-9725-4061-9fb5-7d37e32948c6.png)
 
 
 Pour accéder à Sonarr URL <ip machine:8989>
