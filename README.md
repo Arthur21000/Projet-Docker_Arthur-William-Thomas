@@ -8,7 +8,7 @@ Avant de lancer, modifiez dans le docker-compose.yml la ligne 110   "- LOCAL_NET
 Lancer les conteneurs
 - docker-compose up -d
 
-Pour accéder à portainer pour administrer les conteneurs URL "ip machine:9000" 
+Pour accéder à portainer pour administrer les conteneurs URL "ip machine:9000"
 Compte : admin/Admin33*
 
 Pour accéder à Jackett URL "ip machine:9117"
