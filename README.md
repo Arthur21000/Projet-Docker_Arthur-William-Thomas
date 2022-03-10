@@ -9,16 +9,23 @@ Lancer les conteneurs
 - docker-compose up -d
 
 Pour accéder à portainer pour administrer les conteneurs URL "ip machine:9000"
+
 Compte : admin/Admin33*
 
 Pour accéder à Jackett URL "ip machine:9117"
+
 Deux indexer sont déjà configurer OxTorrent et GkTorrent
 
 Pour accéder à Radarr URL "ip machine:7878"
+
 Pour ajouter les indexers de Jackett il faut aller dans "settings - indexers" puis ajoutez un indexers Torznab
+
 ![image](https://user-images.githubusercontent.com/56296245/157655186-2973c8c7-9725-4061-9fb5-7d37e32948c6.png)
-Faire un second pour OxTorrent
+
+Faire la même chose pour OxTorrent
+
 Pour ajouter le download-client il faut aller dans "settings - download-client " puis ajoutez un client Transmission
+
 ![image](https://user-images.githubusercontent.com/56296245/157655912-7ed70841-b75c-411d-b7b7-2c0c074f17bb.png)
 
 
