@@ -28,10 +28,17 @@ Pour accéder à Radarr URL "ip machine:7878"
 
 ![image](https://user-images.githubusercontent.com/56296245/157655912-7ed70841-b75c-411d-b7b7-2c0c074f17bb.png)
 
+- Ajoutez ensuite le dossier où seront mis les films , allez dans "settings - media management" et "ADD ROOT FOLDER", ajoutez le chemin /radarr/movies
+
+![image](https://user-images.githubusercontent.com/56296245/157659820-e00229ad-f673-4753-89d8-df538c438253.png)
 
 Pour accéder à Sonarr URL "ip machine:8989"
 
 - Pour ajouter les indexers et le download-client, faites la même chose que sur Radarr
+- Ajoutez ensuite le dossier où seront mises les series, allez dans "settings - media management" et "ADD ROOT FOLDER", ajoutez le chemin /sonarr/tv
+
+![image](https://user-images.githubusercontent.com/56296245/157659660-91904012-18c2-46c0-a2ed-f2cb4ac303e2.png)
+
 
 Pour accéder à Bazarr URL "ip machine:6767"
 
