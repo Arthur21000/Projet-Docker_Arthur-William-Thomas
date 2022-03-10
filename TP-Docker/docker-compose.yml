@@ -1,0 +1,128 @@
+version: '3.7'
+services:
+  portainer:
+    container_name: portainer
+    image: portainer/portainer-ce:latest
+    restart: unless-stopped
+    command: -H unix:///var/run/docker.sock
+    ports:
+      - 9000:9000
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - /etc/localtime:/etc/localtime:ro
+      - /etc/timezone:/etc/timezone:ro
+      - ./dataportainer:/data
+    labels: # for traefik, delete this if not needed
+      traefik.enable: true
+      traefik.http.routers.portainer-http.entrypoints: web
+      traefik.http.routers.portainer.rule: Host(portainer.czs.local)
+
+  jackett:
+    image: linuxserver/jackett:latest
+    container_name: jackett
+    restart: unless-stopped
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/Paris
+      - AUTO_UPDATE=true
+    volumes:
+      - ./jackett/config:/config
+      - /etc/localtime:/etc/localtime:ro
+    ports:
+      - 9117:9117
+
+  bazarr:
+    image: linuxserver/bazarr
+    container_name: bazarr
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/Paris
+    volumes:
+      - ./bazarr/config:/bazarr/config
+      - ./bazarr/movies:/bazarr/movies #optional
+      - ./bazarr/tv:/bazarr/tv #optional
+    ports:
+      - 6767:6767
+    restart: unless-stopped
+
+  sonarr:
+    image: linuxserver/sonarr
+    container_name: sonarr
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/Paris
+    volumes:
+      - ./sonarr/data:/sonarr/config
+      - ./sonarr/tvseries:/sonarr/tv #optional
+      - ./sonarr/downloadclient-downloads:/sonarr/downloads #optional
+      - ./transmission/complete:/data/complete
+    ports:
+      - 8989:8989
+    restart: unless-stopped
+
+  radarr:
+    image: linuxserver/radarr
+    container_name: radarr
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/Paris
+    volumes:
+      - ./radarr/data:/radarr/config
+      - ./radarr/movies:/radarr/movies #optional
+      - ./radarr/downloadclient-downloads:/radarr/downloads #optional
+      - ./transmission/complete:/data/complete
+    ports:
+      - 7878:7878
+    restart: unless-stopped
+
+  jellyfin:
+    image: linuxserver/jellyfin
+    container_name: jellyfin
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/Paris
+    volumes:
+      - ./jellyfin/library:/jellyfin/config
+      - ./radarr/movies:/radarr/movies
+      - ./sonarr/tvseries:/sonarr/tvseries
+    ports:
+      - 8096:8096
+    restart: unless-stopped 
+  
+  transmission-openvpn:
+    image: haugene/transmission-openvpn
+    container_name: transmission-openvpn
+    restart: always
+    cap_add:
+      - NET_ADMIN
+    volumes:
+      - '/home/user/yday/transmission:/data'
+    environment:
+      - OPENVPN_PROVIDER=NORDVPN
+      - OPENVPN_CONFIG=
+      - OPENVPN_USERNAME=uNxMVLXyx2QariRTorfUdSkZ
+      - OPENVPN_PASSWORD=ozfVRadG15zvkr7wsX4xBbjz
+      - LOCAL_NETWORK=192.168.10.0/24
+      - TRANSMISSION_WEB_UI=combustion
+      - TRANSMISSION_DOWNLOAD_DIR=/data/complete
+      - TRANSMISSION_INCOMPLETE_DIR=/data/incomplete
+      - PUID=999
+      - PGID=999
+    logging:
+      driver: json-file
+      options:
+        max-size: 10m
+    ports:
+      - '9091:9091'
+    dns:
+      - 8.8.8.8
+      - 8.8.4.4
+
+
+volumes:
+  dataportainer:
