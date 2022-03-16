@@ -66,4 +66,18 @@ Pour accéder à la plateform de streaming final "Jellyfin" URL "ip machine:8096
 
 ![image](https://user-images.githubusercontent.com/56296245/157657590-05ebc416-2478-4e00-8370-1685c8861dd8.png)
 
+Pour la supervision:
+
+- Dans un premier temps , il faut vérifier que la base de donnée time série , Prometheus dans notre cas, est bien en état de marche:
+- Pour se faire , se connecter en "localhost:9090":
+"Pometheus.pnj"
+
+- Ensuite se connecter à Grafana en "localhost:3000", l'utilisateur par défaut est "admin" et le mot de passe "admin", une fois connecter le changement de mot de passe est obligatoire et proposé directement aprés.
+
+- Il faut ajouter la base de donnée à grafana. Aller dans l'onglet configuration et ajouter la base de donnée Prometheus en "access:Browser"
+"prometheus.pnj"
+
+- Il ne reste plus qu'à ajouter un pannel , dans l'exemple ci-dessous nous avons choisis le nombre de bytes restants ,il y a aussi le gestionnaire des disques pour prouver que la métrique choisie n'est pas aléatoire.
+"pannel.pnj
+
 
