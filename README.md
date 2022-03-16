@@ -75,7 +75,7 @@ Pour la supervision:
 - Ensuite se connecter à Grafana en "localhost:3000", l'utilisateur par défaut est "admin" et le mot de passe "admin", une fois connecter le changement de mot de passe est obligatoire et proposé directement aprés.
 
 - Il faut ajouter la base de donnée à grafana. Aller dans l'onglet configuration et ajouter la base de donnée Prometheus en "access:Browser"
-"prometheus.pnj"
+![image](https://user-images.githubusercontent.com/56296245/158547093-16741354-255f-43c8-b121-392fffa297cd.png)
 
 - Il ne reste plus qu'à ajouter un pannel , dans l'exemple ci-dessous nous avons choisis le nombre de bytes restants ,il y a aussi le gestionnaire des disques pour prouver que la métrique choisie n'est pas aléatoire.
 "pannel.pnj
