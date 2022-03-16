@@ -78,6 +78,6 @@ Pour la supervision:
 ![image](https://user-images.githubusercontent.com/56296245/158547093-16741354-255f-43c8-b121-392fffa297cd.png)
 
 - Il ne reste plus qu'à ajouter un pannel , dans l'exemple ci-dessous nous avons choisis le nombre de bytes restants ,il y a aussi le gestionnaire des disques pour prouver que la métrique choisie n'est pas aléatoire.
-"pannel.pnj
+![image](https://user-images.githubusercontent.com/56296245/158547302-6f565a8d-9f1d-4ff7-aeba-2db962cbfa2b.png)
 
 
