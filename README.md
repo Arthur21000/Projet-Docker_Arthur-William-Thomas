@@ -70,7 +70,7 @@ Pour la supervision:
 
 - Dans un premier temps , il faut vérifier que la base de donnée time série , Prometheus dans notre cas, est bien en état de marche:
 - Pour se faire , se connecter en "localhost:9090":
-"Pometheus.pnj"
+![image](https://user-images.githubusercontent.com/56296245/158546878-f8bfe356-90e7-4722-8001-5282441c9a98.png)
 
 - Ensuite se connecter à Grafana en "localhost:3000", l'utilisateur par défaut est "admin" et le mot de passe "admin", une fois connecter le changement de mot de passe est obligatoire et proposé directement aprés.
 
